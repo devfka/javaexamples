@@ -7,9 +7,6 @@ public class main {
 
     public static void main(String[] args) {
 
-        //generic method
-        //generic class
-
         String plakaString = "kerem";
         Integer plakaInteger = new Integer(1);
 
@@ -18,6 +15,13 @@ public class main {
         GenericClass<Long> fatih = new GenericClass<>();
         List<String> strings = new ArrayList<>();
 
+        MyHashTable<String, Integer> myHashTable = new MyHashTable<>();
+
+        myHashTable.put("fatih", 123);
+        myHashTable.put("ezgi", 456);
+        myHashTable.put("onur", 789);
+
+        System.out.println(myHashTable.get("fatih"));
 
     }
 
@@ -31,16 +35,3 @@ public class main {
     }
 }
 
-class GenericClass<T> {
-
-    T plaka;
-
-    public T getT() {
-        return this.plaka;
-    }
-
-    public void setT(T myObject) {
-        this.plaka = myObject;
-    }
-
-}
